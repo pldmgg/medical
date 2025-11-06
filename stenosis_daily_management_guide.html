@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Management Guide - Lumbar Spinal Stenosis (L3-L4 & L4-L5)</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: white;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 32px;
+        }
+        
+        .header p {
+            margin: 5px 0;
+            font-size: 16px;
+            opacity: 0.95;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+            border-left: 5px solid #3498db;
+            padding-left: 20px;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin-bottom: 15px;
+            margin-top: 0;
+        }
+        
+        .key-principle {
+            background: #e8f4f8;
+            border: 2px solid #3498db;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .key-principle h3 {
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+            font-size: 20px;
+        }
+        
+        .key-principle p {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #3498db;
+        }
+        
+        .do-dont-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .do-box, .dont-box {
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .do-box {
+            background: #d4edda;
+            border: 3px solid #28a745;
+        }
+        
+        .dont-box {
+            background: #f8d7da;
+            border: 3px solid #dc3545;
+        }
+        
+        .do-box h3 {
+            color: #155724;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .dont-box h3 {
+            color: #721c24;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .do-box ul, .dont-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .do-box li {
+            color: #155724;
+            margin: 8px 0;
+        }
+        
+        .dont-box li {
+            color: #721c24;
+            margin: 8px 0;
+        }
+        
+        .exercise-card {
+            background: #f8f9fa;
+            border: 2px solid #dee2e6;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+        }
+        
+        .exercise-card h4 {
+            color: #2c3e50;
+            margin: 0 0 10px 0;
+            font-size: 18px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+        }
+        
+        .exercise-instructions {
+            margin: 10px 0;
+        }
+        
+        .exercise-instructions ol {
+            margin: 10px 0;
+            padding-left: 25px;
+        }
+        
+        .exercise-instructions li {
+            margin: 8px 0;
+            line-height: 1.5;
+        }
+        
+        .time-badge {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .reps-badge {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .daily-schedule {
+            background: #fff3cd;
+            border: 3px solid #ffc107;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .daily-schedule h3 {
+            color: #856404;
+            margin-top: 0;
+        }
+        
+        .schedule-item {
+            background: white;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+        }
+        
+        .schedule-time {
+            font-weight: bold;
+            color: #856404;
+            font-size: 16px;
+        }
+        
+        .quick-tips {
+            background: #d1ecf1;
+            border: 2px solid #17a2b8;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .quick-tips h3 {
+            color: #0c5460;
+            margin-top: 0;
+        }
+        
+        .quick-tips ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .quick-tips li {
+            color: #0c5460;
+            margin: 8px 0;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+        }
+        
+        .emergency-box {
+            background: #f8d7da;
+            border: 3px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .emergency-box h3 {
+            color: #721c24;
+            margin-top: 0;
+            font-size: 20px;
+        }
+        
+        .emergency-box ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .emergency-box li {
+            color: #721c24;
+            margin: 8px 0;
+            font-weight: bold;
+        }
+        
+        .tracking-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .tracking-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        
+        .tracking-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .tracking-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .checkbox {
+            width: 20px;
+            height: 20px;
+            border: 2px solid #2c3e50;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        
+        .print-button {
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .print-button:hover {
+            background: #218838;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-top: 2px solid #dee2e6;
+            color: #6c757d;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🏥 Daily Management Guide</h1>
+        <p><strong>Lumbar Spinal Stenosis (L3-L4 & L4-L5)</strong></p>
+        <p>Evidence-Based Positions, Exercises & Lifestyle Strategies</p>
+    </div>
+
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print This Guide</button>
+
+    <!-- KEY PRINCIPLE -->
+    <div class="key-principle">
+        <h3>🔑 THE GOLDEN RULE</h3>
+        <p>FLEXION OPENS THE CANAL → EXTENSION CLOSES IT</p>
+        <p style="font-size: 16px; font-weight: normal; margin-top: 10px;">Forward bending = Relief | Standing upright/arching back = Pain</p>
+    </div>
+
+    <!-- DO'S AND DON'TS -->
+    <div class="section">
+        <h2>✅ ❌ Essential Do's and Don'ts</h2>
+        
+        <div class="do-dont-container">
+            <div class="do-box">
+                <h3>✅ DO THESE</h3>
+                <ul>
+                    <li><strong>Sit frequently</strong> - your best friend!</li>
+                    <li><strong>Lean forward</strong> when standing/walking</li>
+                    <li><strong>Sleep on your side</strong> in fetal position</li>
+                    <li><strong>Use a shopping cart</strong> or walker when walking</li>
+                    <li><strong>Place one foot up</strong> on a stool when standing</li>
+                    <li><strong>Walk uphill</strong> or on inclined treadmill</li>
+                    <li><strong>Practice pelvic tilts</strong> to flatten your back</li>
+                    <li><strong>Strengthen your core</strong> and glutes</li>
+                    <li><strong>Move every 20 minutes</strong> to avoid stiffness</li>
+                </ul>
+            </div>
+            
+            <div class="dont-box">
+                <h3>❌ AVOID THESE</h3>
+                <ul>
+                    <li><strong>Prolonged standing</strong> without breaks</li>
+                    <li><strong>Walking upright</strong> without forward lean</li>
+                    <li><strong>Lying flat on back</strong> (keep knees bent)</li>
+                    <li><strong>Arching your back</strong> backward</li>
+                    <li><strong>Golf, tennis</strong> (twisting motions)</li>
+                    <li><strong>Running or jumping</strong> (high impact)</li>
+                    <li><strong>Heavy lifting</strong> or carrying</li>
+                    <li><strong>Vacuuming, shoveling</strong> (twisting + bending)</li>
+                    <li><strong>Forcing upright posture</strong> when painful</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- DAILY SCHEDULE -->
+    <div class="section">
+        <h2>📅 Your Daily Routine</h2>
+        
+        <div class="daily-schedule">
+            <h3>⏰ Sample Daily Schedule</h3>
+            
+            <div class="schedule-item">
+                <div class="schedule-time">MORNING (Upon Waking)</div>
+                <p>• Start in bed: Gentle knee-to-chest stretches (2-3 reps each leg)<br>
+                • Roll to side and push yourself up to sitting (never sit straight up)<br>
+                • Sit on edge of bed for 1-2 minutes before standing<br>
+                • Morning exercise routine (see exercises below) - 10 minutes</p>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-time">THROUGHOUT THE DAY</div>
+                <p><strong>Follow the 20-8-2 Rule:</strong><br>
+                • Sit for 20 minutes<br>
+                • Stand for 8 minutes (with forward lean or foot on stool)<br>
+                • Move/walk for 2 minutes<br>
+                • REPEAT every 30 minutes</p>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-time">MIDDAY (Lunch Time)</div>
+                <p>• Full exercise routine (15-20 minutes)<br>
+                • Apply heat to lower back for 15-20 minutes<br>
+                • Short walk with shopping cart or walker (5-10 minutes)</p>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-time">EVENING (Before Dinner)</div>
+                <p>• Light stretching routine (10 minutes)<br>
+                • Child's pose hold (1-2 minutes)<br>
+                • Pelvic tilt practice (2 sets of 10)</p>
+            </div>
+            
+            <div class="schedule-item">
+                <div class="schedule-time">BEDTIME</div>
+                <p>• Gentle stretches in bed<br>
+                • Position: Side-lying with pillow between knees<br>
+                • Slight fetal position (knees drawn toward chest)<br>
+                • Consider heat pad for 20 minutes before sleep</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE ROUTINE -->
+    <div class="section">
+        <h2>💪 Daily Exercise Routine (2-3x per day)</h2>
+        
+        <div class="warning-box">
+            <strong>⚠️ IMPORTANT:</strong> Stop any exercise that increases pain. All exercises should be pain-free or cause minimal discomfort. Start slowly and build up gradually.
+        </div>
+        
+        <div class="exercise-card">
+            <h4>1. Child's Pose (Pain Relief Stretch)</h4>
+            <span class="time-badge">Hold 20-30 seconds</span>
+            <span class="reps-badge">3 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Opens spinal canal, immediate pain relief</p>
+                <ol>
+                    <li>Start on hands and knees, knees slightly wider than hips</li>
+                    <li>Turn toes inward to touch, push hips backward</li>
+                    <li>Sit back toward your heels</li>
+                    <li>Extend arms forward on floor, let head drop</li>
+                    <li>Feel gentle stretch in lower back</li>
+                    <li>Hold and breathe deeply</li>
+                    <li>Return slowly to starting position</li>
+                </ol>
+                <p><strong>Tip:</strong> This is your "emergency relief" position - do it whenever pain increases!</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>2. Knee-to-Chest Stretch (Single Leg)</h4>
+            <span class="time-badge">Hold 15-20 seconds</span>
+            <span class="reps-badge">3 reps each leg</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Flexes spine, decompresses nerves</p>
+                <ol>
+                    <li>Lie on back with knees bent, feet flat</li>
+                    <li>Place hands behind right knee</li>
+                    <li>Gently pull right knee toward chest</li>
+                    <li>Keep left foot on floor</li>
+                    <li>Hold stretch without bouncing</li>
+                    <li>Return to start, switch legs</li>
+                </ol>
+                <p><strong>Tip:</strong> You can do this in bed first thing in the morning!</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>3. Double Knee-to-Chest Stretch</h4>
+            <span class="time-badge">Hold 20-30 seconds</span>
+            <span class="reps-badge">3 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Maximum spinal flexion, deep decompression</p>
+                <ol>
+                    <li>Lie on back with knees bent</li>
+                    <li>Place hands behind both knees</li>
+                    <li>Gently pull both knees toward chest</li>
+                    <li>You can gently rock side to side for massage</li>
+                    <li>Hold and breathe</li>
+                    <li>Slowly return to starting position</li>
+                </ol>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>4. Pelvic Tilt Exercise</h4>
+            <span class="time-badge">Hold 5-10 seconds</span>
+            <span class="reps-badge">10-15 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Strengthens core, teaches you to flatten back during activities</p>
+                <ol>
+                    <li>Lie on back, knees bent, feet flat</li>
+                    <li>Tighten abdominal muscles</li>
+                    <li>Squeeze buttocks together</li>
+                    <li>Push lower back flat against floor (eliminating arch)</li>
+                    <li>Hold this position</li>
+                    <li>Relax and repeat</li>
+                </ol>
+                <p><strong>CRITICAL:</strong> Practice this until you can do it standing! This is your secret weapon for standing/walking.</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>5. Cat-Cow Stretch (Modified - Focus on Cat)</h4>
+            <span class="time-badge">Each position 5 seconds</span>
+            <span class="reps-badge">8-10 cycles</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Mobilizes spine, emphasizes flexion</p>
+                <ol>
+                    <li>Start on hands and knees</li>
+                    <li><strong>CAT (main position):</strong> Round your back up toward ceiling, tuck chin, tighten abs - HOLD LONGER</li>
+                    <li><strong>COW (brief):</strong> Only gently release to neutral (don't arch much)</li>
+                    <li>Repeat, spending more time in CAT position</li>
+                </ol>
+                <p><strong>Note:</strong> The rounded back (cat) is therapeutic for stenosis. Don't arch deeply into cow!</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>6. Seated Spinal Flexion</h4>
+            <span class="time-badge">Hold 10-15 seconds</span>
+            <span class="reps-badge">5 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Opens canal while seated</p>
+                <ol>
+                    <li>Sit on edge of chair, feet flat on floor</li>
+                    <li>Slowly bend forward from waist</li>
+                    <li>Let arms hang toward floor</li>
+                    <li>Relax neck and shoulders</li>
+                    <li>Feel gentle stretch in lower back</li>
+                    <li>Slowly return to upright</li>
+                </ol>
+                <p><strong>Tip:</strong> Great to do at your desk throughout the day!</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>7. Standing Pelvic Tilt (Advanced)</h4>
+            <span class="time-badge">Hold 10 seconds</span>
+            <span class="reps-badge">10 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Applies pelvic tilt to real-world standing</p>
+                <ol>
+                    <li>Stand with back against wall</li>
+                    <li>Feet shoulder-width apart, knees slightly bent</li>
+                    <li>Tighten abs and glutes</li>
+                    <li>Push lower back flat against wall</li>
+                    <li>Hold without holding breath</li>
+                    <li>Practice maintaining this while stepping away from wall</li>
+                </ol>
+                <p><strong>GOAL:</strong> Learn to hold this posture while standing and walking in daily life!</p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>8. Wall Sits (Core Strengthening)</h4>
+            <span class="time-badge">Hold 10-20 seconds</span>
+            <span class="reps-badge">3-5 repetitions</span>
+            <div class="exercise-instructions">
+                <p><strong>Purpose:</strong> Strengthens legs and core without spine extension</p>
+                <ol>
+                    <li>Stand with back against wall</li>
+                    <li>Walk feet forward about 2 feet</li>
+                    <li>Slide down wall until knees at 45-90 degrees (not too deep)</li>
+                    <li>Keep back flat against wall</li>
+                    <li>Hold position</li>
+                    <li>Slide back up slowly</li>
+                </ol>
+                <p><strong>Note:</strong> Start with shallow bends and short holds, build up gradually.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- POSITIONING GUIDE -->
+    <div class="section">
+        <h2>🛏️ Optimal Positioning Throughout the Day</h2>
+        
+        <div class="exercise-card">
+            <h4>SLEEPING</h4>
+            <div class="exercise-instructions">
+                <p><strong>Best Position: Side-Lying (Fetal Position)</strong></p>
+                <ul>
+                    <li>Lie on your side (either side is fine)</li>
+                    <li>Draw knees up toward chest slightly</li>
+                    <li>Place firm pillow between knees</li>
+                    <li>Head pillow should keep neck aligned with spine</li>
+                    <li>Can hug a body pillow for extra support</li>
+                </ul>
+                <p><strong>Acceptable Alternative: Back Sleeping with Modification</strong></p>
+                <ul>
+                    <li>If you must sleep on back, keep knees bent</li>
+                    <li>Place pillows under knees to maintain flexion</li>
+                    <li>Use enough pillows so knees stay elevated</li>
+                </ul>
+                <p><strong>❌ AVOID: Sleeping on stomach or flat on back with legs straight</strong></p>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>SITTING</h4>
+            <div class="exercise-instructions">
+                <p><strong>Optimal Sitting Posture:</strong></p>
+                <ul>
+                    <li>Sit with buttocks all the way back in chair</li>
+                    <li>Feet flat on floor, knees at 90 degrees</li>
+                    <li>Hips slightly HIGHER than knees (very important!)</li>
+                    <li>Use lumbar support cushion that maintains slight curve</li>
+                    <li>Keep shoulders relaxed, not hunched</li>
+                    <li>Get up and move every 20 minutes</li>
+                </ul>
+                <p><strong>Chair Requirements:</strong></p>
+                <ul>
+                    <li>Firm seat (not soft couch)</li>
+                    <li>Adjustable height</li>
+                    <li>Good lumbar support</li>
+                    <li>Armrests to help you stand up</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>STANDING</h4>
+            <div class="exercise-instructions">
+                <p><strong>Modified Standing Positions:</strong></p>
+                <ul>
+                    <li><strong>Option 1:</strong> Place one foot on 6-8 inch footstool, switch feet every few minutes</li>
+                    <li><strong>Option 2:</strong> Lean forward on counter, desk, or high table</li>
+                    <li><strong>Option 3:</strong> Lean against barstool for support</li>
+                    <li><strong>Option 4:</strong> Practice active pelvic tilt (tighten abs/glutes to flatten back)</li>
+                </ul>
+                <p><strong>Standing While Working:</strong></p>
+                <ul>
+                    <li>Use standing desk at appropriate height</li>
+                    <li>Keep footstool under desk</li>
+                    <li>Alternate feet on stool every 2-3 minutes</li>
+                    <li>Lean forward slightly at hips</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>WALKING</h4>
+            <div class="exercise-instructions">
+                <p><strong>Walking Modifications:</strong></p>
+                <ul>
+                    <li><strong>Best: Use shopping cart or walker</strong> - allows forward lean</li>
+                    <li><strong>Good: Use hiking poles or cane</strong> - provides support</li>
+                    <li><strong>Treadmill:</strong> Set to incline (walking uphill = forward lean)</li>
+                    <li><strong>Outdoors:</strong> Walk uphill when possible, avoid downhill</li>
+                    <li>Take frequent sitting breaks every 5-10 minutes</li>
+                    <li>Slow, steady pace better than rushing</li>
+                </ul>
+                <p><strong>❌ AVOID: Walking upright without support for extended periods</strong></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- QUICK TIPS -->
+    <div class="section">
+        <h2>💡 Quick Daily Tips</h2>
+        
+        <div class="quick-tips">
+            <h3>Home Modifications</h3>
+            <ul>
+                <li>Raise bed, chair, and toilet seat height with risers</li>
+                <li>Install grab bars in bathroom and by stairs</li>
+                <li>Keep frequently used items at waist level</li>
+                <li>Use long-handled tools (grabber, shoe horn, duster)</li>
+                <li>Remove throw rugs and tripping hazards</li>
+                <li>Place night lights to prevent falls</li>
+            </ul>
+        </div>
+        
+        <div class="quick-tips">
+            <h3>Kitchen & Household Tasks</h3>
+            <ul>
+                <li>Place one foot on drawer/cabinet base when at counter</li>
+                <li>Sit on stool while preparing food</li>
+                <li>Avoid vacuuming (twisting motion) - ask for help</li>
+                <li>Bend at knees, not waist, when picking things up</li>
+                <li>Push, don't pull heavy items</li>
+                <li>Take breaks every 10-15 minutes</li>
+            </ul>
+        </div>
+        
+        <div class="quick-tips">
+            <h3>Pain Management</h3>
+            <ul>
+                <li><strong>Ice:</strong> First 48-72 hours of new pain (15-20 min sessions)</li>
+                <li><strong>Heat:</strong> After 72 hours for chronic pain (20 min sessions, 2-3x daily)</li>
+                <li><strong>NSAIDs:</strong> As prescribed by doctor for inflammation</li>
+                <li><strong>Position change:</strong> Often more effective than medication!</li>
+                <li><strong>Emergency relief:</strong> Drop into child's pose immediately</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- WEEKLY TRACKING -->
+    <div class="section">
+        <h2>📊 Weekly Exercise Tracking Log</h2>
+        
+        <p>Check off each exercise session to stay accountable. Aim for 2-3 sessions daily.</p>
+        
+        <table class="tracking-table">
+            <thead>
+                <tr>
+                    <th>Exercise</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Morning Routine (10 min)</strong></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Midday Routine (15-20 min)</strong></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Evening Stretches (10 min)</strong></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>Walking (with cart/walker)</strong></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                </tr>
+                <tr>
+                    <td><strong>20-8-2 Rule Followed</strong></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                    <td><span class="checkbox"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 20px; padding: 15px; background: #f8f9fa; border-radius: 8px;">
+            <p><strong>Daily Pain Level (1-10):</strong> Circle your average pain level each day</p>
+            <p style="font-size: 18px; letter-spacing: 8px; text-align: center;">
+                Mon: 1 2 3 4 5 6 7 8 9 10 | Tue: 1 2 3 4 5 6 7 8 9 10 | Wed: 1 2 3 4 5 6 7 8 9 10<br>
+                Thu: 1 2 3 4 5 6 7 8 9 10 | Fri: 1 2 3 4 5 6 7 8 9 10 | Sat: 1 2 3 4 5 6 7 8 9 10 | Sun: 1 2 3 4 5 6 7 8 9 10
+            </p>
+        </div>
+    </div>
+
+    <!-- EMERGENCY WARNING -->
+    <div class="section">
+        <div class="emergency-box">
+            <h3>🚨 EMERGENCY: Seek Immediate Medical Care If You Experience:</h3>
+            <ul>
+                <li>Loss of bladder or bowel control</li>
+                <li>Sudden severe weakness in legs</li>
+                <li>Numbness in groin/inner thigh area (saddle anesthesia)</li>
+                <li>Progressive leg weakness over hours/days</li>
+                <li>Severe pain not relieved by position changes</li>
+            </ul>
+            <p style="text-align: center; margin-top: 15px;"><strong>These could indicate cauda equina syndrome - a surgical emergency!</strong></p>
+        </div>
+    </div>
+
+    <!-- ADDITIONAL RECOMMENDATIONS -->
+    <div class="section">
+        <h2>🎯 Additional Recommendations</h2>
+        
+        <div class="exercise-card">
+            <h4>Weight Management</h4>
+            <p>Excess weight places additional stress on the lumbar spine. Even losing 5-10 pounds can significantly reduce symptoms. Focus on anti-inflammatory foods:</p>
+            <ul>
+                <li><strong>Eat more:</strong> Fish, leafy greens, berries, nuts, olive oil, turmeric</li>
+                <li><strong>Limit:</strong> Processed foods, sugar, red meat, fried foods, alcohol</li>
+            </ul>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>Safe Activities for Fitness</h4>
+            <p><strong>✅ Recommended:</strong></p>
+            <ul>
+                <li>Swimming (breast stroke preferred, avoid butterfly)</li>
+                <li>Water aerobics</li>
+                <li>Recumbent stationary bike</li>
+                <li>Elliptical machine (with forward lean)</li>
+                <li>Gentle yoga (focus on flexion poses, avoid backbends)</li>
+                <li>Tai Chi</li>
+            </ul>
+            <p><strong>❌ Avoid:</strong></p>
+            <ul>
+                <li>Running, jogging</li>
+                <li>Contact sports</li>
+                <li>Golf</li>
+                <li>Tennis, racquetball</li>
+                <li>Heavy weightlifting</li>
+                <li>Yoga backbends (cobra, camel, wheel)</li>
+            </ul>
+        </div>
+        
+        <div class="exercise-card">
+            <h4>Working with Healthcare Providers</h4>
+            <ul>
+                <li><strong>Physical Therapy:</strong> Consider formal PT for personalized exercise program</li>
+                <li><strong>Pain Management:</strong> Epidural steroid injections may provide temporary relief</li>
+                <li><strong>Regular Follow-ups:</strong> Monitor progression with your spine specialist</li>
+                <li><strong>Pre-surgical optimization:</strong> These exercises strengthen you for potential surgery</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- SUCCESS METRICS -->
+    <div class="section">
+        <h2>📈 Measuring Your Progress</h2>
+        
+        <div class="quick-tips">
+            <h3>You're Succeeding If You Notice:</h3>
+            <ul>
+                <li>Increased walking distance before symptoms start</li>
+                <li>Reduced pain intensity (even 1-2 points on 10-point scale)</li>
+                <li>Better sleep quality</li>
+                <li>Ability to stand longer with modifications</li>
+                <li>Reduced need for pain medication</li>
+                <li>Improved leg strength</li>
+                <li>More good days than bad days each week</li>
+                <li>Ability to do more daily activities independently</li>
+            </ul>
+        </div>
+        
+        <div class="warning-box">
+            <strong>⏱️ Be Patient:</strong> Symptom improvement typically takes 4-6 weeks of consistent daily exercise and positioning. Don't get discouraged if results aren't immediate!
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <p><strong>Remember: This guide is for L3-L4 and L4-L5 stenosis management.</strong></p>
+        <p>Always consult with your healthcare provider before starting any new exercise program.</p>
+        <p>Print multiple copies and post reminders in key locations: bedroom, kitchen, office.</p>
+        <p style="margin-top: 20px; font-style: italic;">Generated specifically for stenosis-predominant pathology at L3-L4 and L4-L5</p>
+    </div>
+
+</body>
+</html>

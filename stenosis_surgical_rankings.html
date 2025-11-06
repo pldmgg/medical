@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updated Surgical Rankings - Stenosis-Predominant Pathology</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.2em;
+        }
+        .diagnosis-banner {
+            background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .diagnosis-banner h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.5em;
+        }
+        .diagnosis-banner p {
+            margin: 5px 0;
+            font-size: 1.1em;
+        }
+        .key-findings {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        .key-findings h3 {
+            margin-top: 0;
+            color: #856404;
+        }
+        .key-findings ul {
+            margin: 10px 0;
+            color: #856404;
+        }
+        .key-findings li {
+            margin: 8px 0;
+        }
+        .ranking-section {
+            margin-bottom: 50px;
+        }
+        .ranking-title {
+            background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .option-card {
+            background: #f8f9fa;
+            border-left: 6px solid;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .option-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+        }
+        .rank-1 { border-left-color: #27ae60; background: linear-gradient(to right, #e8f8f0 0%, #f8f9fa 100%); }
+        .rank-2 { border-left-color: #2ecc71; background: linear-gradient(to right, #eafaf1 0%, #f8f9fa 100%); }
+        .rank-3 { border-left-color: #3498db; background: linear-gradient(to right, #ebf5fb 0%, #f8f9fa 100%); }
+        .rank-4 { border-left-color: #f39c12; background: linear-gradient(to right, #fef5e7 0%, #f8f9fa 100%); }
+        .rank-5 { border-left-color: #e67e22; background: linear-gradient(to right, #fdf2e9 0%, #f8f9fa 100%); }
+        .rank-6 { border-left-color: #e74c3c; background: linear-gradient(to right, #fadbd8 0%, #f8f9fa 100%); }
+        
+        .rank-badge {
+            display: inline-block;
+            background: #2c3e50;
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+        .optimal-badge {
+            background: #27ae60;
+            margin-left: 10px;
+            font-size: 0.85em;
+        }
+        .option-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 12px;
+        }
+        .option-description {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+        .why-good-for-stenosis {
+            background: #d4edda;
+            border-left: 3px solid #28a745;
+            padding: 12px 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+        }
+        .why-good-for-stenosis strong {
+            color: #155724;
+            display: block;
+            margin-bottom: 5px;
+        }
+        .why-good-for-stenosis ul {
+            margin: 5px 0 0 20px;
+            color: #155724;
+        }
+        .key-points {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+        .key-points li {
+            color: #666;
+            margin: 6px 0;
+            line-height: 1.6;
+        }
+        .warning-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 4px;
+            color: #721c24;
+        }
+        .warning-box strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .best-option {
+            background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            margin: 40px 0;
+            box-shadow: 0 8px 20px rgba(39, 174, 96, 0.3);
+        }
+        .best-option h2 {
+            margin-top: 0;
+            font-size: 2em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .best-option h3 {
+            font-size: 1.5em;
+            margin-top: 20px;
+            border-bottom: 2px solid rgba(255,255,255,0.3);
+            padding-bottom: 10px;
+        }
+        .best-option ul {
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .comparison-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 14px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+        .comparison-table td {
+            padding: 12px 14px;
+            border-bottom: 1px solid #ddd;
+        }
+        .comparison-table tr:hover {
+            background: #f8f9fa;
+        }
+        .score {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+            font-size: 0.9em;
+        }
+        .score-excellent { background: #27ae60; }
+        .score-good { background: #2ecc71; }
+        .score-fair { background: #3498db; }
+        .score-poor { background: #f39c12; }
+        .score-bad { background: #e74c3c; }
+        
+        .not-recommended {
+            opacity: 0.7;
+        }
+        .not-recommended::after {
+            content: " ❌ NOT RECOMMENDED";
+            color: #e74c3c;
+            font-weight: bold;
+            font-size: 0.85em;
+            margin-left: 10px;
+        }
+        .clinical-note {
+            background: #e8f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            border-left: 5px solid #3498db;
+        }
+        .clinical-note h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        .fusion-indicator {
+            background: #fff3cd;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 10px 0;
+            border-left: 3px solid #ffc107;
+        }
+        .fusion-indicator strong {
+            color: #856404;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Updated Surgical Rankings</h1>
+        
+        <div class="diagnosis-banner">
+            <h2>📋 Confirmed Diagnosis: Stenosis-Predominant Pathology</h2>
+            <p><strong>NOT disc herniation</strong> - This is degenerative canal stenosis</p>
+        </div>
+
+        <div class="key-findings">
+            <h3>🔍 What This Changes About Treatment:</h3>
+            <ul>
+                <li><strong>Primary goal:</strong> Create space by removing bone and thickened ligaments (NOT removing disc material)</li>
+                <li><strong>Ligamentum flavum hypertrophy</strong> is a major contributor - needs to be removed</li>
+                <li><strong>Facet joint arthritis</strong> is narrowing the canal - may need partial facetectomy</li>
+                <li><strong>Broad disc bulging</strong> (not focal herniation) - disc removal is NOT the primary procedure</li>
+                <li><strong>Multi-level involvement:</strong> L3-L4 and L4-L5 both affected</li>
+                <li><strong>Decompression is MORE important than fusion</strong> unless instability is present</li>
+            </ul>
+        </div>
+
+        <!-- UPDATED RANKING -->
+        <div class="ranking-section">
+            <div class="ranking-title">🏆 OPTIMAL RANKING FOR STENOSIS (Best → Worst)</div>
+            
+            <div class="option-card rank-1">
+                <span class="rank-badge">#1 - OPTIMAL CHOICE</span>
+                <span class="rank-badge optimal-badge">⭐ BEST FOR STENOSIS</span>
+                <div class="option-title">Bilateral Laminectomy (L3-L4 AND L4-L5) Without Fusion</div>
+                <div class="option-description">
+                    Complete removal of lamina, spinous processes, and thickened ligamentum flavum at both stenotic levels, with preservation of spinal motion.
+                </div>
+                
+                <div class="why-good-for-stenosis">
+                    <strong>🎯 Why This is IDEAL for Stenosis:</strong>
+                    <ul>
+                        <li>Directly addresses the pathology: removes the bone and ligament compressing the nerves</li>
+                        <li>Creates maximum space for nerve decompression</li>
+                        <li>Treats both symptomatic levels in one procedure</li>
+                        <li>Allows removal of hypertrophied ligamentum flavum (the main culprit)</li>
+                        <li>Preserves motion - important since fusion may not be necessary for stenosis alone</li>
+                        <li>Can trim facets as needed without destabilizing if done carefully</li>
+                    </ul>
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>Procedure:</strong> 4-6 cm midline incision, removal of lamina and thickened ligaments bilaterally at two levels</li>
+                    <li><strong>Hospital stay:</strong> 1-3 days</li>
+                    <li><strong>Recovery:</strong> 6-8 weeks to full activity</li>
+                    <li><strong>Success rate for stenosis:</strong> 80-90% symptom improvement</li>
+                    <li><strong>Motion preserved:</strong> Yes - full lumbar motion maintained</li>
+                </ul>
+
+                <div class="fusion-indicator">
+                    <strong>⚠️ Fusion Status:</strong> NOT needed unless flexion-extension X-rays show instability or significant spondylolisthesis
+                </div>
+            </div>
+
+            <div class="option-card rank-2">
+                <span class="rank-badge">#2 - EXCELLENT ALTERNATIVE</span>
+                <div class="option-title">Minimally Invasive Bilateral Decompression (L3-L4 and L4-L5)</div>
+                <div class="option-description">
+                    Tubular retractor approach with bilateral decompression through smaller incisions, preserving more muscle and bone.
+                </div>
+                
+                <div class="why-good-for-stenosis">
+                    <strong>🎯 Why This Works for Stenosis:</strong>
+                    <ul>
+                        <li>Still achieves adequate decompression of stenotic canal</li>
+                        <li>Less muscle damage means faster recovery</li>
+                        <li>Can still remove ligamentum flavum and trim facets</li>
+                        <li>Addresses both levels adequately</li>
+                        <li>Lower blood loss and post-op pain</li>
+                    </ul>
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>Procedure:</strong> Multiple small incisions (2-3 cm each), microscopic decompression</li>
+                    <li><strong>Hospital stay:</strong> Same day to overnight</li>
+                    <li><strong>Recovery:</strong> 4-6 weeks</li>
+                    <li><strong>Limitation:</strong> May be technically challenging for severe multilevel stenosis</li>
+                    <li><strong>Motion preserved:</strong> Yes</li>
+                </ul>
+            </div>
+
+            <div class="option-card rank-3">
+                <span class="rank-badge">#3 - GOOD OPTION</span>
+                <div class="option-title">Staged Bilateral Laminectomy (L4-L5 first, then L3-L4 if needed)</div>
+                <div class="option-description">
+                    Treat the most symptomatic level (typically L4-L5) first, then assess if L3-L4 decompression is still necessary.
+                </div>
+                
+                <div class="why-good-for-stenosis">
+                    <strong>🎯 Why This Can Work:</strong>
+                    <ul>
+                        <li>Reduces initial surgical trauma</li>
+                        <li>Some patients improve enough from single-level decompression</li>
+                        <li>Can avoid unnecessary surgery at second level</li>
+                        <li>Lower upfront risk</li>
+                    </ul>
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>Advantage:</strong> Minimizes initial surgery</li>
+                    <li><strong>Disadvantage:</strong> May require second operation</li>
+                    <li><strong>Cost consideration:</strong> Two procedures = higher total cost</li>
+                    <li><strong>Best for:</strong> Patients who want to minimize initial surgery or have clear single-level dominance</li>
+                </ul>
+            </div>
+
+            <div class="option-card rank-4">
+                <span class="rank-badge">#4 - FAIR (If Instability Present)</span>
+                <div class="option-title">Laminectomy + Single-Level Fusion (L4-L5 only)</div>
+                <div class="option-description">
+                    Decompression at both levels but fusion only at L4-L5 if that level shows instability.
+                </div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ ONLY if Instability Confirmed:</strong>
+                    This should only be chosen if flexion-extension films show spondylolisthesis or instability at L4-L5. For pure stenosis without instability, fusion is NOT needed and only adds risk.
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>Indications:</strong> Degenerative spondylolisthesis >4mm, instability on dynamic films</li>
+                    <li><strong>Recovery:</strong> 12-16 weeks</li>
+                    <li><strong>Hardware:</strong> 4 pedicle screws + rods at one level</li>
+                    <li><strong>Adjacent segment risk:</strong> Moderate (one fused segment)</li>
+                </ul>
+            </div>
+
+            <div class="option-card rank-5">
+                <span class="rank-badge">#5 - SUBOPTIMAL</span>
+                <div class="option-title">Two-Level Decompression + Two-Level Fusion (L3-L4 and L4-L5)</div>
+                <div class="option-description">
+                    Complete decompression with instrumented fusion across both symptomatic levels.
+                </div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Generally NOT Appropriate for Pure Stenosis:</strong>
+                    Two-level fusion for stenosis alone (without significant instability at BOTH levels) is overtreatment. The risks of fusion outweigh benefits when decompression alone would suffice.
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>ONLY consider if:</strong> Severe instability at both levels, failed prior decompression-alone, significant deformity</li>
+                    <li><strong>Recovery:</strong> 16-24 weeks</li>
+                    <li><strong>Loss of motion:</strong> Two segments eliminated</li>
+                    <li><strong>Complication risk:</strong> Higher than decompression alone</li>
+                    <li><strong>Adjacent segment disease risk:</strong> Significantly increased</li>
+                </ul>
+            </div>
+
+            <div class="option-card rank-6 not-recommended">
+                <span class="rank-badge">#6 - NOT RECOMMENDED</span>
+                <div class="option-title">Three-Level Fusion (L3-S1) Including Previous Surgery Site</div>
+                <div class="option-description">
+                    Extension of fusion from new symptomatic levels down to previously operated L5-S1.
+                </div>
+                
+                <div class="warning-box">
+                    <strong>❌ AVOID Unless Absolutely Necessary:</strong>
+                    This should be a last resort only if there is severe multi-level instability or failed prior fusion at L5-S1 requiring revision. For stenosis-predominant pathology, this is significant overtreatment.
+                </div>
+
+                <ul class="key-points">
+                    <li><strong>Massive surgery:</strong> 8-12 cm incision, 6-8 screws, extensive dissection</li>
+                    <li><strong>Recovery:</strong> 6-12 months</li>
+                    <li><strong>Loss of entire lower lumbar motion</strong></li>
+                    <li><strong>High complication rate:</strong> 20-30%</li>
+                    <li><strong>Adjacent segment disease:</strong> Very high risk at L2-L3</li>
+                    <li><strong>Quality of life impact:</strong> Significant permanent restriction</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- BEST OPTION HIGHLIGHT -->
+        <div class="best-option">
+            <h2>🏆 RECOMMENDED APPROACH FOR THIS PATIENT</h2>
+            
+            <h3>Primary Recommendation: Bilateral Laminectomy L3-L4 and L4-L5 WITHOUT Fusion</h3>
+            
+            <p style="font-size: 1.1em; line-height: 1.8; margin: 20px 0;">
+                Based on the MRI findings showing <strong>stenosis-predominant pathology</strong> with ligamentum flavum hypertrophy, 
+                facet arthropathy, and canal narrowing (but NO large disc herniations), the optimal treatment is 
+                <strong>decompressive laminectomy without fusion</strong>.
+            </p>
+
+            <h3>Why Decompression Alone is Optimal:</h3>
+            <ul>
+                <li><strong>Targets the actual pathology:</strong> Removes thickened ligaments and bone compressing the nerves</li>
+                <li><strong>Creates adequate space:</strong> Allows nerve roots and thecal sac to decompress</li>
+                <li><strong>Preserves motion:</strong> Maintains lumbar flexibility - critical given prior L5-S1 surgery</li>
+                <li><strong>Lower risk:</strong> No hardware complications, pseudarthrosis, or adjacent segment disease from fusion</li>
+                <li><strong>Faster recovery:</strong> 6-8 weeks vs 4-6 months for fusion</li>
+                <li><strong>Proven effectiveness:</strong> 80-90% success rate for stenosis without instability</li>
+                <li><strong>Reversible decision:</strong> Can always fuse later if instability develops</li>
+            </ul>
+
+            <h3>When to ADD Fusion:</h3>
+            <ul>
+                <li>✓ Flexion-extension X-rays show >4mm translation (spondylolisthesis)</li>
+                <li>✓ Significant angular instability on dynamic films</li>
+                <li>✓ Surgeon needs to remove >50% of facet joints for adequate decompression</li>
+                <li>✓ Degenerative scoliosis with coronal imbalance</li>
+            </ul>
+
+            <h3>Pre-Operative Imaging Needed:</h3>
+            <ul>
+                <li>📸 Flexion-extension lateral X-rays to assess for instability</li>
+                <li>📸 Standing full-length spine X-rays if scoliosis suspected</li>
+            </ul>
+        </div>
+
+        <!-- COMPARISON TABLE -->
+        <div class="ranking-section">
+            <div class="ranking-title">📊 Updated Comparison Matrix (Stenosis-Specific)</div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Procedure</th>
+                        <th>Addresses Stenosis</th>
+                        <th>Preserves Motion</th>
+                        <th>Risk Level</th>
+                        <th>Recovery Time</th>
+                        <th>Appropriateness for Stenosis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Bilateral Laminectomy (no fusion)</strong></td>
+                        <td><span class="score score-excellent">Excellent</span></td>
+                        <td><span class="score score-excellent">Yes</span></td>
+                        <td><span class="score score-excellent">Low</span></td>
+                        <td><span class="score score-excellent">6-8 weeks</span></td>
+                        <td><span class="score score-excellent">OPTIMAL</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>MIS Bilateral Decompression</strong></td>
+                        <td><span class="score score-good">Very Good</span></td>
+                        <td><span class="score score-excellent">Yes</span></td>
+                        <td><span class="score score-excellent">Very Low</span></td>
+                        <td><span class="score score-excellent">4-6 weeks</span></td>
+                        <td><span class="score score-excellent">EXCELLENT</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Staged Single-Level First</strong></td>
+                        <td><span class="score score-fair">Partial</span></td>
+                        <td><span class="score score-excellent">Yes</span></td>
+                        <td><span class="score score-excellent">Low</span></td>
+                        <td><span class="score score-good">4-6 weeks</span></td>
+                        <td><span class="score score-good">GOOD</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Single-Level Fusion</strong></td>
+                        <td><span class="score score-good">Good</span></td>
+                        <td><span class="score score-fair">Partial</span></td>
+                        <td><span class="score score-fair">Moderate</span></td>
+                        <td><span class="score score-poor">12-16 weeks</span></td>
+                        <td><span class="score score-fair">FAIR*</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Two-Level Fusion</strong></td>
+                        <td><span class="score score-good">Good</span></td>
+                        <td><span class="score score-poor">No</span></td>
+                        <td><span class="score score-poor">High</span></td>
+                        <td><span class="score score-bad">16-24 weeks</span></td>
+                        <td><span class="score score-poor">POOR*</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Three-Level Fusion</strong></td>
+                        <td><span class="score score-fair">Fair</span></td>
+                        <td><span class="score score-bad">No</span></td>
+                        <td><span class="score score-bad">Very High</span></td>
+                        <td><span class="score score-bad">6-12 months</span></td>
+                        <td><span class="score score-bad">INAPPROPRIATE</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px; color: #666; font-style: italic;">
+                * Fusion options rated "Fair" or "Poor" are only appropriate if instability is documented on imaging. For stenosis alone, fusion is overtreatment.
+            </p>
+        </div>
+
+        <!-- CLINICAL NOTES -->
+        <div class="clinical-note">
+            <h3>💡 Key Clinical Pearls for Stenosis Surgery:</h3>
+            <p style="line-height: 1.8; color: #2c3e50;">
+                <strong>1. Stenosis ≠ Instability:</strong> Most patients with spinal stenosis do NOT have instability. 
+                The correlation between stenosis and instability is actually quite low (~15-20%). Don't assume fusion is needed just because stenosis is present.
+            </p>
+            <p style="line-height: 1.8; color: #2c3e50;">
+                <strong>2. The "Fusion Paradox":</strong> Studies show that for stenosis without instability, adding fusion 
+                to decompression provides NO additional benefit for leg pain (the primary symptom) but increases complications, 
+                cost, and recovery time.
+            </p>
+            <p style="line-height: 1.8; color: #2c3e50;">
+                <strong>3. Motion Preservation Matters:</strong> Given this patient's prior L5-S1 laminectomy (which may have 
+                caused some stiffness), preserving motion at L3-L4 and L4-L5 is particularly important for maintaining functional mobility.
+            </p>
+            <p style="line-height: 1.8; color: #2c3e50;">
+                <strong>4. Adequate Decompression is Key:</strong> The surgeon must remove enough bone and ligament to truly 
+                decompress the canal - timid decompression leads to persistent symptoms. However, this can be done while preserving 
+                enough facet joint to maintain stability.
+            </p>
+            <p style="line-height: 1.8; color: #2c3e50;">
+                <strong>5. Get Flexion-Extension Films First:</strong> This is the KEY imaging study that determines if fusion 
+                is truly needed. If these show <4mm translation and no angular instability, fusion is NOT indicated.
+            </p>
+        </div>
+    </div>
+</body>
+</html>
