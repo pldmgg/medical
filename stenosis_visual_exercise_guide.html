@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Exercise Guide - Lumbar Stenosis L3-L4 & L4-L5</title>
+    <style>
+        @media print {
+            body { margin: 0; padding: 0; }
+            .page-break { page-break-after: always; }
+            .no-print { display: none; }
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0.5in;
+            background: #f5f5f5;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 12px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            margin: 0 0 10px 0;
+            font-size: 36px;
+        }
+        
+        .exercise-page {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .exercise-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .exercise-number {
+            background: #667eea;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .exercise-title {
+            flex: 1;
+            margin-left: 20px;
+        }
+        
+        .exercise-title h2 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 24px;
+        }
+        
+        .exercise-badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+        
+        .badge {
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .badge-time { background: #3498db; }
+        .badge-reps { background: #27ae60; }
+        .badge-level { background: #e67e22; }
+        
+        .illustration-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        
+        .illustration-container svg {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .instructions-box {
+            background: #e8f4f8;
+            border-left: 5px solid #3498db;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .instructions-box h3 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+        
+        .steps {
+            counter-reset: step-counter;
+            list-style: none;
+            padding: 0;
+        }
+        
+        .steps li {
+            counter-increment: step-counter;
+            margin: 15px 0;
+            padding-left: 40px;
+            position: relative;
+            line-height: 1.8;
+        }
+        
+        .steps li::before {
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #667eea;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .tips-box {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .tips-box strong {
+            color: #155724;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box strong {
+            color: #856404;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .benefits-box {
+            background: #f3e5f5;
+            border-left: 5px solid #9c27b0;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .benefits-box h4 {
+            margin-top: 0;
+            color: #6a1b9a;
+        }
+        
+        .print-button {
+            background: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+        
+        .print-button:hover {
+            background: #218838;
+        }
+        
+        .key-points {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .key-point {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid #dee2e6;
+        }
+        
+        .key-point strong {
+            color: #667eea;
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🧘 Visual Exercise Guide</h1>
+        <p style="font-size: 18px;">Lumbar Spinal Stenosis (L3-L4 & L4-L5)</p>
+        <p>Illustrated Exercise Instructions</p>
+    </div>
+
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print Exercise Guide</button>
+
+    <!-- EXERCISE 1: CHILD'S POSE -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">1</div>
+            <div class="exercise-title">
+                <h2>Child's Pose (Balasana)</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 20-30 sec</span>
+                    <span class="badge badge-reps">3 repetitions</span>
+                    <span class="badge badge-level">★ PAIN RELIEF</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="300" viewBox="0 0 600 300">
+                <!-- Floor -->
+                <rect x="0" y="220" width="600" height="80" fill="#e8e8e8"/>
+                <line x1="0" y1="220" x2="600" y2="220" stroke="#999" stroke-width="2"/>
+                
+                <!-- Person in Child's Pose -->
+                <!-- Legs/feet -->
+                <ellipse cx="250" cy="200" rx="40" ry="25" fill="#ffdbac"/>
+                <ellipse cx="350" cy="200" rx="40" ry="25" fill="#ffdbac"/>
+                
+                <!-- Buttocks/hips sitting back -->
+                <ellipse cx="300" cy="170" rx="60" ry="40" fill="#6c9bd1"/>
+                
+                <!-- Torso bent forward -->
+                <path d="M 300 150 Q 320 130 380 120" stroke="#6c9bd1" stroke-width="50" fill="none" stroke-linecap="round"/>
+                
+                <!-- Arms extended forward -->
+                <line x1="380" y1="130" x2="520" y2="210" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                <line x1="380" y1="110" x2="500" y2="210" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                
+                <!-- Hands -->
+                <ellipse cx="520" cy="215" rx="20" ry="12" fill="#ffdbac"/>
+                <ellipse cx="500" cy="215" rx="20" ry="12" fill="#ffdbac"/>
+                
+                <!-- Head down -->
+                <circle cx="390" cy="120" r="25" fill="#ffdbac"/>
+                
+                <!-- Annotations -->
+                <text x="300" y="260" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">
+                    Knees wider than hips, toes touching
+                </text>
+                
+                <!-- Arrow showing sit-back motion -->
+                <path d="M 200 120 L 250 150" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowred)"/>
+                <text x="160" y="120" font-size="14" fill="#e74c3c" font-weight="bold">Sit back</text>
+                
+                <!-- Arrow showing arms forward -->
+                <path d="M 450 80 L 500 100" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowgreen)"/>
+                <text x="420" y="70" font-size="14" fill="#27ae60" font-weight="bold">Arms forward</text>
+                
+                <!-- Arrow markers -->
+                <defs>
+                    <marker id="arrowred" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                    </marker>
+                    <marker id="arrowgreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#27ae60"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Start on your hands and knees on a comfortable mat or carpet</li>
+                <li>Position knees slightly wider than your hips (about 6-8 inches apart)</li>
+                <li>Turn your toes inward so big toes touch behind you</li>
+                <li>Slowly push your hips backward toward your heels</li>
+                <li>Extend your arms forward on the floor, palms down</li>
+                <li>Allow your forehead to rest on the mat (use pillow if needed)</li>
+                <li>Breathe deeply and feel gentle stretch in lower back</li>
+                <li>Hold for 20-30 seconds, then slowly return to starting position</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>Child's Pose is your <strong>"emergency relief position"</strong> for lumbar stenosis. It creates maximum spinal flexion, which opens the spinal canal and immediately relieves pressure on compressed nerves. This position reduces the lumbar lordosis (backward curve) that narrows the canal when standing.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>If knees are uncomfortable, place a rolled towel behind them</li>
+                <li>If you can't reach the floor, rest on a pillow or bolster</li>
+                <li>Use this position ANY TIME pain increases - it's your go-to relief pose</li>
+                <li>You can gently rock side to side for added relief</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ Caution:</strong>
+            Stop if you experience sharp pain, dizziness, or difficulty breathing. If you have knee problems, use extra padding or modify the position.
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 2: KNEE TO CHEST -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">2</div>
+            <div class="exercise-title">
+                <h2>Single Knee-to-Chest Stretch</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 15-20 sec</span>
+                    <span class="badge badge-reps">3 reps each leg</span>
+                    <span class="badge badge-level">BEGINNER</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="300" viewBox="0 0 600 300">
+                <!-- Mat -->
+                <rect x="50" y="180" width="500" height="100" fill="#e8e8e8"/>
+                
+                <!-- Person lying on back -->
+                <!-- Body/torso -->
+                <rect x="150" y="150" width="300" height="60" rx="10" fill="#6c9bd1"/>
+                
+                <!-- Head -->
+                <circle cx="150" cy="180" r="30" fill="#ffdbac"/>
+                
+                <!-- Left leg (bent, pulled to chest) -->
+                <ellipse cx="280" cy="170" rx="35" ry="60" fill="#4a7ba7" transform="rotate(-30 280 170)"/>
+                
+                <!-- Right leg (flat on mat) -->
+                <rect x="340" y="200" width="80" height="40" rx="20" fill="#4a7ba7"/>
+                <ellipse cx="430" cy="220" rx="25" ry="35" fill="#ffdbac"/>
+                
+                <!-- Arms holding knee -->
+                <path d="M 220 180 Q 260 160 280 150" stroke="#ffdbac" stroke-width="15" fill="none" stroke-linecap="round"/>
+                
+                <!-- Hand on knee -->
+                <ellipse cx="270" cy="145" rx="18" ry="25" fill="#ffdbac" transform="rotate(-20 270 145)"/>
+                
+                <!-- Arrows and labels -->
+                <path d="M 280 120 L 280 140" stroke="#e74c3c" stroke-width="3" fill="none" marker-end="url(#arrowred2)"/>
+                <text x="240" y="110" font-size="14" fill="#e74c3c" font-weight="bold">Pull toward chest</text>
+                
+                <path d="M 380 240 L 380 210" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowgreen2)"/>
+                <text x="320" y="265" font-size="14" fill="#27ae60" font-weight="bold">Keep foot on floor</text>
+                
+                <defs>
+                    <marker id="arrowred2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#e74c3c"/>
+                    </marker>
+                    <marker id="arrowgreen2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#27ae60"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Lie flat on your back on a mat or firm surface</li>
+                <li>Bend both knees, keeping feet flat on the floor</li>
+                <li>Place both hands behind your right knee</li>
+                <li>Slowly and gently pull your right knee toward your chest</li>
+                <li>Keep your left foot planted firmly on the floor</li>
+                <li>Hold the stretch without bouncing - steady pressure only</li>
+                <li>Breathe normally throughout the hold</li>
+                <li>Slowly lower right leg back to starting position</li>
+                <li>Repeat with left leg</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>This stretch flexes the lumbar spine in a controlled, gentle manner. By pulling one knee at a time, you create targeted flexion that opens the spinal canal at specific levels. This position decompresses nerve roots and reduces pressure on the L3-L4 and L4-L5 discs.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Perfect for doing in bed first thing in the morning!</li>
+                <li>Pull gently - you should feel a comfortable stretch, not pain</li>
+                <li>If you can't reach behind your knee, use a towel or belt</li>
+                <li>Keep your head and shoulders relaxed on the mat</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 3: PELVIC TILT -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">3</div>
+            <div class="exercise-title">
+                <h2>Pelvic Tilt Exercise</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 5-10 sec</span>
+                    <span class="badge badge-reps">10-15 reps</span>
+                    <span class="badge badge-level">★ CORE STRENGTH</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="350" viewBox="0 0 600 350">
+                <!-- Two positions side by side -->
+                <!-- LEFT SIDE - Neutral/Arched -->
+                <text x="150" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#e74c3c">BEFORE (Arched)</text>
+                
+                <!-- Mat -->
+                <rect x="20" y="180" width="260" height="100" fill="#f8f9fa"/>
+                <line x1="20" y1="180" x2="280" y2="180" stroke="#999" stroke-width="2"/>
+                
+                <!-- Person with arch in back -->
+                <rect x="80" y="150" width="160" height="50" rx="10" fill="#6c9bd1"/>
+                <circle cx="80" cy="175" r="25" fill="#ffdbac"/>
+                
+                <!-- Legs bent -->
+                <rect x="180" y="190" width="50" height="35" rx="15" fill="#4a7ba7"/>
+                <ellipse cx="210" cy="230" rx="20" ry="30" fill="#ffdbac"/>
+                
+                <!-- Show gap under back -->
+                <path d="M 130 200 Q 150 210 170 200" stroke="#e74c3c" stroke-width="3" fill="none" stroke-dasharray="5,5"/>
+                <text x="150" y="240" text-anchor="middle" font-size="12" fill="#e74c3c" font-weight="bold">Gap = Arch</text>
+                
+                <!-- RIGHT SIDE - Tilted/Flat -->
+                <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#27ae60">AFTER (Flat)</text>
+                
+                <!-- Mat -->
+                <rect x="320" y="180" width="260" height="100" fill="#f8f9fa"/>
+                <line x1="320" y1="180" x2="580" y2="180" stroke="#999" stroke-width="2"/>
+                
+                <!-- Person with flat back -->
+                <rect x="380" y="155" width="160" height="50" rx="10" fill="#6c9bd1"/>
+                <circle cx="380" cy="180" r="25" fill="#ffdbac"/>
+                
+                <!-- Legs bent -->
+                <rect x="480" y="195" width="50" height="35" rx="15" fill="#4a7ba7"/>
+                <ellipse cx="510" cy="235" rx="20" ry="30" fill="#ffdbac"/>
+                
+                <!-- Show back flat against mat -->
+                <line x1="430" y1="205" x2="430" y2="180" stroke="#27ae60" stroke-width="3"/>
+                <text x="450" y="245" text-anchor="middle" font-size="12" fill="#27ae60" font-weight="bold">Back Flat!</text>
+                
+                <!-- Instruction annotations -->
+                <text x="150" y="300" text-anchor="middle" font-size="14" fill="#666">
+                    Relaxed position
+                </text>
+                <text x="450" y="300" text-anchor="middle" font-size="14" fill="#666">
+                    Tighten abs & glutes
+                </text>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Lie on your back with knees bent, feet flat on floor</li>
+                <li>Place arms at sides, palms down</li>
+                <li>Notice the natural arch in your lower back (you can slide hand under it)</li>
+                <li>Tighten your abdominal muscles (like you're preparing for a punch)</li>
+                <li>Simultaneously squeeze your buttocks together</li>
+                <li>Push your lower back flat against the floor, eliminating the arch</li>
+                <li>Your pelvis will tilt upward slightly</li>
+                <li>Hold this position for 5-10 seconds while breathing normally</li>
+                <li>Relax and return to neutral</li>
+                <li>Repeat 10-15 times</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p><strong>This is THE MOST IMPORTANT exercise for real-world application!</strong> The pelvic tilt teaches you to actively flatten your spine using your core muscles. Once mastered lying down, you'll learn to do this while standing and walking - giving you an active tool to relieve stenosis symptoms throughout your day.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Think "tuck your tailbone under" - this helps cue the movement</li>
+                <li>Your lower back should press into the floor - no gap!</li>
+                <li>Practice until you can do this without thinking about it</li>
+                <li>NEXT STEP: Learn to do this while standing (see Exercise 7)</li>
+            </ul>
+        </div>
+
+        <div class="key-points">
+            <div class="key-point">
+                <strong>What You'll Feel:</strong>
+                Abdominal muscles and glutes working. Lower back pressing into floor.
+            </div>
+            <div class="key-point">
+                <strong>Common Mistake:</strong>
+                Don't just lift hips up - focus on flattening back to floor using muscle contraction.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 4: CAT-COW (MODIFIED) -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">4</div>
+            <div class="exercise-title">
+                <h2>Modified Cat-Cow (Cat Emphasis)</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">5 sec each</span>
+                    <span class="badge badge-reps">8-10 cycles</span>
+                    <span class="badge badge-level">MOBILITY</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="400" viewBox="0 0 600 400">
+                <!-- CAT POSITION (TOP) -->
+                <text x="300" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#27ae60">CAT (Hold Longer) ✓</text>
+                
+                <!-- Floor -->
+                <rect x="50" y="170" width="500" height="5" fill="#999"/>
+                
+                <!-- Arms -->
+                <line x1="150" y1="120" x2="150" y2="170" stroke="#ffdbac" stroke-width="25" stroke-linecap="round"/>
+                <line x1="450" y1="120" x2="450" y2="170" stroke="#ffdbac" stroke-width="25" stroke-linecap="round"/>
+                
+                <!-- Hands -->
+                <ellipse cx="150" cy="175" rx="25" ry="15" fill="#ffdbac"/>
+                <ellipse cx="450" cy="175" rx="25" ry="15" fill="#ffdbac"/>
+                
+                <!-- Legs -->
+                <line x1="200" y1="140" x2="200" y2="170" stroke="#4a7ba7" stroke-width="30" stroke-linecap="round"/>
+                <line x1="400" y1="140" x2="400" y2="170" stroke="#4a7ba7" stroke-width="30" stroke-linecap="round"/>
+                
+                <!-- Rounded back - arched UP -->
+                <path d="M 150 120 Q 300 60 450 120" stroke="#6c9bd1" stroke-width="60" fill="none" stroke-linecap="round"/>
+                
+                <!-- Head tucked down -->
+                <circle cx="240" cy="100" r="30" fill="#ffdbac"/>
+                
+                <!-- Arrow showing arch direction -->
+                <path d="M 300 40 L 300 70" stroke="#27ae60" stroke-width="4" fill="none" marker-end="url(#arrowgreencat)"/>
+                <text x="240" y="30" font-size="14" fill="#27ae60" font-weight="bold">Round back UP</text>
+                
+                <!-- COW POSITION (BOTTOM) - MINIMAL -->
+                <text x="300" y="250" text-anchor="middle" font-size="18" font-weight="bold" fill="#ffc107">NEUTRAL (Brief) ⚠️</text>
+                
+                <!-- Floor -->
+                <rect x="50" y="370" width="500" height="5" fill="#999"/>
+                
+                <!-- Arms -->
+                <line x1="150" y1="330" x2="150" y2="370" stroke="#ffdbac" stroke-width="25" stroke-linecap="round"/>
+                <line x1="450" y1="330" x2="450" y2="370" stroke="#ffdbac" stroke-width="25" stroke-linecap="round"/>
+                
+                <!-- Hands -->
+                <ellipse cx="150" cy="375" rx="25" ry="15" fill="#ffdbac"/>
+                <ellipse cx="450" cy="375" rx="25" ry="15" fill="#ffdbac"/>
+                
+                <!-- Legs -->
+                <line x1="200" y1="340" x2="200" y2="370" stroke="#4a7ba7" stroke-width="30" stroke-linecap="round"/>
+                <line x1="400" y1="340" x2="400" y2="370" stroke="#4a7ba7" stroke-width="30" stroke-linecap="round"/>
+                
+                <!-- Neutral/slightly arched back -->
+                <path d="M 150 330 Q 300 310 450 330" stroke="#6c9bd1" stroke-width="60" fill="none" stroke-linecap="round"/>
+                
+                <!-- Head neutral -->
+                <circle cx="240" cy="310" r="30" fill="#ffdbac"/>
+                
+                <text x="300" y="395" text-anchor="middle" font-size="12" fill="#856404" font-style="italic">
+                    Don't arch deeply - just return to neutral briefly
+                </text>
+                
+                <defs>
+                    <marker id="arrowgreencat" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#27ae60"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Start on hands and knees in tabletop position</li>
+                <li>Hands directly under shoulders, knees under hips</li>
+                <li><strong>CAT POSE:</strong> Round your back up toward the ceiling like a scared cat</li>
+                <li>Tuck your chin toward chest and tighten abdominal muscles</li>
+                <li><strong>HOLD CAT for 5-7 seconds</strong> (this is the therapeutic position!)</li>
+                <li><strong>COW POSE:</strong> Gently release back to neutral or slight arch</li>
+                <li>Lift head to look forward (don't arch deeply or look up)</li>
+                <li><strong>HOLD COW for 2-3 seconds only</strong></li>
+                <li>Return to CAT pose</li>
+                <li>Repeat 8-10 cycles, spending more time in CAT</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>The CAT portion (rounded back) creates spinal flexion that opens your spinal canal - this is where the therapeutic benefit comes from. The brief COW phase just adds gentle mobility. For stenosis, we emphasize CAT and minimize COW to avoid excessive extension.</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ CRITICAL MODIFICATION FOR STENOSIS:</strong>
+            Unlike traditional cat-cow, DO NOT arch deeply into cow pose. Only go to neutral or slight arch. Deep extension (looking way up, belly dropping) will worsen stenosis symptoms!
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Spend 70% of time in CAT, 30% in neutral COW</li>
+                <li>Move slowly and smoothly - no jerking motions</li>
+                <li>If wrists hurt, try doing this on fists or use push-up handles</li>
+                <li>Coordinate movement with breathing: exhale in CAT, inhale in COW</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 5: SEATED FORWARD BEND -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">5</div>
+            <div class="exercise-title">
+                <h2>Seated Spinal Flexion</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 10-15 sec</span>
+                    <span class="badge badge-reps">5 repetitions</span>
+                    <span class="badge badge-level">DESK-FRIENDLY</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="300" viewBox="0 0 600 300">
+                <!-- Chair -->
+                <rect x="200" y="180" width="200" height="15" fill="#8b7355"/>
+                <rect x="210" y="120" width="10" height="60" fill="#8b7355"/>
+                <rect x="380" y="120" width="10" height="60" fill="#8b7355"/>
+                <rect x="200" y="70" width="15" height="110" fill="#8b7355"/>
+                
+                <!-- Person sitting and bending forward -->
+                <!-- Legs -->
+                <rect x="250" y="180" width="40" height="80" rx="10" fill="#4a7ba7"/>
+                <rect x="310" y="180" width="40" height="80" rx="10" fill="#4a7ba7"/>
+                
+                <!-- Feet -->
+                <rect x="240" y="255" width="60" height="20" rx="5" fill="#333"/>
+                <rect x="310" y="255" width="60" height="20" rx="5" fill="#333"/>
+                
+                <!-- Torso bending forward -->
+                <ellipse cx="300" cy="160" rx="50" ry="35" fill="#6c9bd1"/>
+                
+                <!-- Back curved forward -->
+                <path d="M 280 150 Q 320 100 360 120" stroke="#6c9bd1" stroke-width="45" fill="none" stroke-linecap="round"/>
+                
+                <!-- Arms hanging down -->
+                <line x1="320" y1="140" x2="280" y2="220" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                <line x1="340" y1="130" x2="370" y2="220" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                
+                <!-- Hands -->
+                <ellipse cx="280" cy="225" rx="15" ry="20" fill="#ffdbac"/>
+                <ellipse cx="370" cy="225" rx="15" ry="20" fill="#ffdbac"/>
+                
+                <!-- Head -->
+                <circle cx="360" cy="115" r="28" fill="#ffdbac"/>
+                
+                <!-- Arrow showing bend -->
+                <path d="M 400 80 Q 420 100 410 130" stroke="#27ae60" stroke-width="3" fill="none" marker-end="url(#arrowgreenseat)"/>
+                <text x="430" y="100" font-size="14" fill="#27ae60" font-weight="bold">Bend forward</text>
+                
+                <!-- Ground line -->
+                <line x1="100" y1="280" x2="500" y2="280" stroke="#999" stroke-width="2"/>
+                
+                <text x="300" y="295" text-anchor="middle" font-size="14" fill="#666">
+                    Feet flat, arms hang naturally
+                </text>
+                
+                <defs>
+                    <marker id="arrowgreenseat" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#27ae60"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Sit on the edge of a sturdy chair</li>
+                <li>Place feet flat on floor, about hip-width apart</li>
+                <li>Start with upright posture, shoulders relaxed</li>
+                <li>Slowly bend forward from your waist, not your neck</li>
+                <li>Let your arms hang loosely toward the floor</li>
+                <li>Allow your upper body to relax completely</li>
+                <li>Let your head hang naturally - don't force it down</li>
+                <li>Breathe slowly and feel gentle stretch in lower back</li>
+                <li>Hold for 10-15 seconds</li>
+                <li>Slowly roll back up to sitting, one vertebra at a time</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>This is the perfect <strong>desk exercise</strong> you can do throughout your workday! The forward flexion opens the spinal canal while gravity gently assists the stretch. It counteracts the effects of prolonged sitting and provides immediate relief from stenosis symptoms.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Do this every hour at your desk - set a timer!</li>
+                <li>Let gravity do the work - don't force yourself down</li>
+                <li>If you can't reach far, that's fine - just bend as far as comfortable</li>
+                <li>You can place hands on thighs and "walk" them down your legs</li>
+                <li>Perfect to do during phone calls or meetings</li>
+            </ul>
+        </div>
+
+        <div class="key-points">
+            <div class="key-point">
+                <strong>Perfect For:</strong>
+                Office workers, anyone who sits long periods, quick relief during the day.
+            </div>
+            <div class="key-point">
+                <strong>Bonus:</strong>
+                Also stretches hamstrings and relieves lower back tension from sitting.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 6: STANDING PELVIC TILT -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">6</div>
+            <div class="exercise-title">
+                <h2>Standing Pelvic Tilt</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 10 sec</span>
+                    <span class="badge badge-reps">10 reps</span>
+                    <span class="badge badge-level">★ REAL-WORLD</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="400" viewBox="0 0 600 400">
+                <!-- BEFORE - Standing with arch -->
+                <text x="150" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#e74c3c">BEFORE (Arched)</text>
+                
+                <!-- Wall -->
+                <rect x="20" y="50" width="10" height="300" fill="#d0d0d0"/>
+                
+                <!-- Person with arched back -->
+                <ellipse cx="120" cy="120" rx="35" ry="40" fill="#6c9bd1"/>
+                <rect x="95" y="150" width="50" height="120" rx="10" fill="#6c9bd1"/>
+                
+                <!-- Legs -->
+                <rect x="95" y="265" width="20" height="80" rx="10" fill="#4a7ba7"/>
+                <rect x="125" y="265" width="20" height="80" rx="10" fill="#4a7ba7"/>
+                
+                <!-- Feet -->
+                <rect x="90" y="340" width="30" height="15" rx="5" fill="#333"/>
+                <rect x="125" y="340" width="30" height="15" rx="5" fill="#333"/>
+                
+                <!-- Head -->
+                <circle cx="120" cy="100" r="25" fill="#ffdbac"/>
+                
+                <!-- Show gap between back and wall -->
+                <path d="M 30 200 L 85 200" stroke="#e74c3c" stroke-width="3" stroke-dasharray="5,5"/>
+                <text x="50" y="220" font-size="12" fill="#e74c3c" font-weight="bold">Gap!</text>
+                
+                <!-- AFTER - Standing with flat back -->
+                <text x="450" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#27ae60">AFTER (Flat)</text>
+                
+                <!-- Wall -->
+                <rect x="570" y="50" width="10" height="300" fill="#d0d0d0"/>
+                
+                <!-- Person with flat back against wall -->
+                <ellipse cx="480" cy="120" rx="35" ry="40" fill="#6c9bd1"/>
+                <rect x="455" y="150" width="50" height="120" rx="10" fill="#6c9bd1"/>
+                
+                <!-- Legs slightly bent -->
+                <rect x="455" y="265" width="20" height="75" rx="10" fill="#4a7ba7" transform="rotate(-5 465 265)"/>
+                <rect x="485" y="265" width="20" height="75" rx="10" fill="#4a7ba7" transform="rotate(5 495 265)"/>
+                
+                <!-- Feet -->
+                <rect x="440" y="335" width="30" height="15" rx="5" fill="#333"/>
+                <rect x="495" y="335" width="30" height="15" rx="5" fill="#333"/>
+                
+                <!-- Head -->
+                <circle cx="480" cy="100" r="25" fill="#ffdbac"/>
+                
+                <!-- Show back flat against wall -->
+                <line x1="505" y1="200" x2="570" y2="200" stroke="#27ae60" stroke-width="3"/>
+                <text x="530" y="220" font-size="12" fill="#27ae60" font-weight="bold">Flat!</text>
+                
+                <!-- Muscle activation indicators -->
+                <circle cx="480" cy="190" r="15" fill="#ff6b6b" opacity="0.5"/>
+                <text x="480" y="195" text-anchor="middle" font-size="10" font-weight="bold">ABS</text>
+                
+                <circle cx="480" cy="240" r="15" fill="#ff6b6b" opacity="0.5"/>
+                <text x="475" y="245" text-anchor="middle" font-size="9" font-weight="bold">GLUTES</text>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Stand with your back against a wall</li>
+                <li>Place feet about 12 inches from wall, shoulder-width apart</li>
+                <li>Bend knees slightly (about 5-10 degrees)</li>
+                <li>Notice the natural arch in your lower back (gap between back and wall)</li>
+                <li>Tighten your abdominal muscles (pull belly button toward spine)</li>
+                <li>Squeeze your buttocks together firmly</li>
+                <li>Push your lower back flat against the wall (eliminate the gap)</li>
+                <li>Hold this position for 10 seconds while breathing normally</li>
+                <li>Maintain the muscle contraction - don't hold your breath!</li>
+                <li>Step away from wall while maintaining this posture</li>
+                <li>Practice walking with this pelvic tilt position</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p><strong>THIS IS YOUR SECRET WEAPON!</strong> Once you master this, you can actively relieve stenosis symptoms while standing and walking. This exercise teaches you to flatten your spine using muscle power instead of relying on external support. It's the bridge between lying-down exercises and real-world pain management.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Master this against the wall first, then practice without wall support</li>
+                <li>Eventually you should be able to do this anywhere: standing in line, cooking, etc.</li>
+                <li>Think "tuck tailbone under" - this helps engage the right muscles</li>
+                <li>Your goal: maintain this posture ALL DAY while standing</li>
+                <li>At first your abs will get tired quickly - that's normal! Build endurance gradually</li>
+            </ul>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ Practice Schedule:</strong>
+            Week 1: Against wall only, 10 seconds × 10 reps<br>
+            Week 2: Against wall, then step away and hold 5 seconds<br>
+            Week 3: Practice without wall, hold 10-15 seconds<br>
+            Week 4+: Use constantly while standing and walking
+        </div>
+
+        <div class="key-points">
+            <div class="key-point">
+                <strong>The Goal:</strong>
+                Transform this exercise into your default standing posture. Your core muscles replace mechanical support!
+            </div>
+            <div class="key-point">
+                <strong>Success Marker:</strong>
+                When you can maintain this posture while walking without thinking about it.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 7: WALL SITS -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">7</div>
+            <div class="exercise-title">
+                <h2>Wall Sits (Modified)</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 10-20 sec</span>
+                    <span class="badge badge-reps">3-5 reps</span>
+                    <span class="badge badge-level">STRENGTH</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="350" viewBox="0 0 600 350">
+                <!-- Wall -->
+                <rect x="50" y="50" width="15" height="300" fill="#d0d0d0"/>
+                
+                <!-- Person in wall sit position -->
+                <!-- Torso against wall -->
+                <rect x="65" y="140" width="50" height="100" rx="10" fill="#6c9bd1"/>
+                
+                <!-- Head -->
+                <circle cx="90" cy="120" r="25" fill="#ffdbac"/>
+                
+                <!-- Thighs (angled) -->
+                <rect x="115" y="210" width="70" height="30" rx="10" fill="#4a7ba7"/>
+                
+                <!-- Lower legs (vertical) -->
+                <rect x="180" y="230" width="25" height="90" rx="10" fill="#4a7ba7"/>
+                <rect x="155" y="230" width="25" height="90" rx="10" fill="#4a7ba7"/>
+                
+                <!-- Feet -->
+                <rect x="150" y="315" width="35" height="15" rx="5" fill="#333"/>
+                <rect x="175" y="315" width="35" height="15" rx="5" fill="#333"/>
+                
+                <!-- Arms at sides or on thighs -->
+                <line x1="75" y1="160" x2="100" y2="210" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                <line x1="105" y1="160" x2="130" y2="210" stroke="#ffdbac" stroke-width="18" stroke-linecap="round"/>
+                
+                <!-- Angle indicators -->
+                <!-- 90 degree angle at knee -->
+                <path d="M 180 240 L 180 260 L 200 260" stroke="#e74c3c" stroke-width="2" fill="none"/>
+                <text x="205" y="260" font-size="14" fill="#e74c3c" font-weight="bold">45-90°</text>
+                
+                <!-- Back flat against wall indicator -->
+                <line x1="65" y1="180" x2="50" y2="180" stroke="#27ae60" stroke-width="4"/>
+                <text x="10" y="190" font-size="12" fill="#27ae60" font-weight="bold">Back flat</text>
+                
+                <!-- RIGHT SIDE - Annotation diagram -->
+                <text x="400" y="80" text-anchor="middle" font-size="16" font-weight="bold" fill="#2c3e50">KEY POINTS</text>
+                
+                <!-- Checkpoints -->
+                <circle cx="320" cy="120" r="8" fill="#27ae60"/>
+                <text x="340" y="125" font-size="14" fill="#333">Back pressed to wall</text>
+                
+                <circle cx="320" cy="160" r="8" fill="#27ae60"/>
+                <text x="340" y="165" font-size="14" fill="#333">Knees not past toes</text>
+                
+                <circle cx="320" cy="200" r="8" fill="#27ae60"/>
+                <text x="340" y="205" font-size="14" fill="#333">Weight in heels</text>
+                
+                <circle cx="320" cy="240" r="8" fill="#ffc107"/>
+                <text x="340" y="245" font-size="14" fill="#856404">Don't go too deep!</text>
+                
+                <text x="400" y="280" text-anchor="middle" font-size="13" fill="#666" font-style="italic">
+                    Start with 45° bend, progress to 90° over time
+                </text>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Stand with back against a wall, feet hip-width apart</li>
+                <li>Walk feet forward about 18-24 inches from wall</li>
+                <li>Slowly slide down the wall by bending your knees</li>
+                <li><strong>START SHALLOW:</strong> Only bend to 45 degrees (not a deep squat!)</li>
+                <li>Keep your back flat against the wall throughout</li>
+                <li>Ensure knees stay behind or over toes (never past toes)</li>
+                <li>Distribute weight through your heels, not toes</li>
+                <li>Keep arms relaxed at sides or rest hands on thighs</li>
+                <li>Hold this position for 10-20 seconds (or as long as comfortable)</li>
+                <li>Slowly slide back up to standing</li>
+                <li>Rest for 30 seconds between repetitions</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>Wall sits strengthen your quadriceps, glutes, and core muscles - all essential for maintaining proper posture that relieves stenosis. Strong legs allow you to walk longer with forward lean, and strong glutes help you maintain the pelvic tilt position during daily activities.</p>
+        </div>
+
+        <div class="warning-box">
+            <strong>⚠️ IMPORTANT MODIFICATIONS FOR STENOSIS:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Start with shallow bends (45°) - don't go to full 90° squat initially</li>
+                <li>Keep back FLAT against wall - this maintains spinal flexion</li>
+                <li>If you feel stenosis pain increasing, you're going too deep - stay shallower</li>
+                <li>Progress depth gradually over weeks, not days</li>
+            </ul>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Start with 10-second holds, build to 30+ seconds over several weeks</li>
+                <li>Breathe normally - don't hold your breath!</li>
+                <li>If thighs burn, that's normal - it means muscles are working</li>
+                <li>Stop if you feel sharp knee pain or stenosis symptoms increase</li>
+                <li>Can do this while watching TV or talking on phone</li>
+            </ul>
+        </div>
+
+        <div class="key-points">
+            <div class="key-point">
+                <strong>Progression:</strong>
+                Week 1-2: 45° × 10 sec<br>
+                Week 3-4: 60° × 15 sec<br>
+                Week 5+: 90° × 20-30 sec
+            </div>
+            <div class="key-point">
+                <strong>When to Stop:</strong>
+                Quivering legs are OK. Sharp pain, stenosis symptoms, or knee pain = STOP.
+            </div>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <!-- EXERCISE 8: DOUBLE KNEE TO CHEST -->
+    <div class="exercise-page">
+        <div class="exercise-header">
+            <div class="exercise-number">8</div>
+            <div class="exercise-title">
+                <h2>Double Knee-to-Chest Stretch</h2>
+                <div class="exercise-badges">
+                    <span class="badge badge-time">Hold 20-30 sec</span>
+                    <span class="badge badge-reps">3 reps</span>
+                    <span class="badge badge-level">MAX RELIEF</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="illustration-container">
+            <svg width="600" height="300" viewBox="0 0 600 300">
+                <!-- Mat -->
+                <rect x="100" y="180" width="400" height="100" fill="#e8e8e8"/>
+                <line x1="100" y1="180" x2="500" y2="180" stroke="#999" stroke-width="2"/>
+                
+                <!-- Person lying with both knees pulled to chest -->
+                <!-- Head -->
+                <circle cx="180" cy="170" r="30" fill="#ffdbac"/>
+                
+                <!-- Upper body/shoulders -->
+                <rect x="200" y="155" width="80" height="50" rx="10" fill="#6c9bd1"/>
+                
+                <!-- Both legs bent and pulled up -->
+                <ellipse cx="320" cy="160" rx="45" ry="70" fill="#4a7ba7" transform="rotate(-20 320 160)"/>
+                <ellipse cx="360" cy="155" rx="45" ry="70" fill="#4a7ba7" transform="rotate(-10 360 155)"/>
+                
+                <!-- Arms wrapped around knees -->
+                <path d="M 250 180 Q 300 140 340 140" stroke="#ffdbac" stroke-width="16" fill="none" stroke-linecap="round"/>
+                <path d="M 250 170 Q 310 135 370 140" stroke="#ffdbac" stroke-width="16" fill="none" stroke-linecap="round"/>
+                
+                <!-- Hands clasped behind knees -->
+                <ellipse cx="340" cy="135" rx="22" ry="18" fill="#ffdbac"/>
+                <ellipse cx="365" cy="138" rx="22" ry="18" fill="#ffdbac"/>
+                
+                <!-- Optional rocking arrows -->
+                <path d="M 380 100 Q 420 120 400 150" stroke="#3498db" stroke-width="3" fill="none" marker-end="url(#arrowblue)" stroke-dasharray="4,4"/>
+                <path d="M 400 200 Q 420 180 380 160" stroke="#3498db" stroke-width="3" fill="none" marker-end="url(#arrowblue)" stroke-dasharray="4,4"/>
+                <text x="440" y="135" font-size="13" fill="#3498db" font-weight="bold">Optional:<br/>Gentle<br/>rocking</text>
+                
+                <!-- Annotation -->
+                <text x="300" y="255" text-anchor="middle" font-size="14" fill="#2c3e50" font-weight="bold">
+                    Maximum spinal flexion - Most relief
+                </text>
+                
+                <defs>
+                    <marker id="arrowblue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                        <path d="M0,0 L0,6 L9,3 z" fill="#3498db"/>
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+
+        <div class="instructions-box">
+            <h3>📋 Step-by-Step Instructions</h3>
+            <ol class="steps">
+                <li>Lie flat on your back on a mat or comfortable surface</li>
+                <li>Bend both knees and place feet flat on floor</li>
+                <li>Place both hands behind your knees (or on top of shins)</li>
+                <li>Gently pull both knees toward your chest simultaneously</li>
+                <li>Draw knees as close as comfortable - don't force it</li>
+                <li>Keep your lower back pressed to the floor</li>
+                <li>Relax your shoulders and neck</li>
+                <li><strong>Optional:</strong> Gently rock side to side for gentle back massage</li>
+                <li>Hold this position for 20-30 seconds, breathing deeply</li>
+                <li>Slowly release knees and return feet to floor</li>
+            </ol>
+        </div>
+
+        <div class="benefits-box">
+            <h4>✨ Why This Exercise Helps</h4>
+            <p>This provides <strong>maximum spinal flexion</strong> and opens the spinal canal to its widest possible dimension. It's one of the most effective positions for immediate stenosis relief. The gentle rocking motion can also release tension in the paraspinal muscles and provide a massage effect to the lower back.</p>
+        </div>
+
+        <div class="tips-box">
+            <strong>💡 Pro Tips:</strong>
+            <ul style="margin: 5px 0 0 20px;">
+                <li>Perfect as the LAST exercise in your routine for maximum relief</li>
+                <li>Great to do in bed before sleeping or first thing in morning</li>
+                <li>If you can't hold behind knees, use a towel or strap around thighs</li>
+                <li>The rocking motion is optional but feels great!</li>
+                <li>You can hug knees tighter or looser based on comfort</li>
+            </ul>
+        </div>
+
+        <div class="key-points">
+            <div class="key-point">
+                <strong>When to Use:</strong>
+                After other exercises, before bed, during pain flare-ups, or whenever you need maximum relief.
+            </div>
+            <div class="key-point">
+                <strong>Pairs Well With:</strong>
+                Child's pose - alternate between these two positions for prolonged relief sessions.
+            </div>
+        </div>
+    </div>
+
+    <!-- SUMMARY PAGE -->
+    <div class="page-break"></div>
+    
+    <div class="exercise-page">
+        <div class="header" style="margin-bottom: 20px;">
+            <h1>📝 Quick Reference Summary</h1>
+        </div>
+
+        <div class="instructions-box">
+            <h3>✅ Daily Routine Checklist</h3>
+            <table style="width: 100%; border-collapse: collapse;">
+                <tr style="background: #f8f9fa;">
+                    <th style="padding: 12px; text-align: left; border: 1px solid #dee2e6;">Exercise</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Time</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Reps</th>
+                    <th style="padding: 12px; text-align: center; border: 1px solid #dee2e6;">Priority</th>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">1. Child's Pose</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">20-30 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">3x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★★</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">2. Single Knee-to-Chest</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">15-20 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">3x each</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">3. Pelvic Tilt (lying)</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">5-10 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">10-15x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★★</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">4. Modified Cat-Cow</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">5 sec each</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">8-10x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">5. Seated Forward Bend</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">10-15 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">5x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">6. Standing Pelvic Tilt</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">10 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">10x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★★</td>
+                </tr>
+                <tr>
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">7. Wall Sits</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">10-20 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">3-5x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★</td>
+                </tr>
+                <tr style="background: #f8f9fa;">
+                    <td style="padding: 10px; border: 1px solid #dee2e6;">8. Double Knee-to-Chest</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">20-30 sec</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">3x</td>
+                    <td style="padding: 10px; text-align: center; border: 1px solid #dee2e6;">★★</td>
+                </tr>
+            </table>
+            <p style="margin-top: 15px; font-size: 14px; color: #666;">
+                <strong>Priority Legend:</strong> ★★★ = Essential daily | ★★ = Important | ★ = Optional strength building
+            </p>
+        </div>
+
+        <div class="tips-box" style="margin-top: 20px;">
+            <strong>🎯 Remember the Golden Rule:</strong>
+            <p style="margin: 10px 0; font-size: 16px;">
+                <strong>FLEXION (bending forward) = OPENS canal = RELIEF</strong><br>
+                <strong>EXTENSION (arching back) = CLOSES canal = PAIN</strong>
+            </p>
+            <p style="margin: 10px 0;">
+                Every exercise in this guide focuses on flexion or teaches you to maintain flexion during daily activities!
+            </p>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 30px; margin-top: 30px; border-top: 2px solid #dee2e6;">
+        <p style="color: #6c757d; font-size: 14px;">
+            <strong>Visual Exercise Guide for Lumbar Spinal Stenosis (L3-L4 & L4-L5)</strong><br>
+            Print this guide and keep it visible during exercise sessions<br>
+            Consult your healthcare provider before beginning any exercise program
+        </p>
+    </div>
+
+</body>
+</html>
